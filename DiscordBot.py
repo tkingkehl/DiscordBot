@@ -18,6 +18,8 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith('!istimcool'): # Tim is cool, duh.
         await client.send_message(message.channel, 'Well of course.')
+    if message.content.startswith('!isliamcool'):  # Liam isn't cool, duh.
+        await client.send_message(message.channel, 'Oh god no.')
     if message.content.startswith('!hidrricks'): # Tim is cool, duh.
         await client.send_message(message.channel, 'Hello! It must be lab day.')
     elif message.content.startswith('!whattimeisit'): # Returns current time
@@ -26,7 +28,7 @@ async def on_message(message):
     elif message.content.startswith('!coinflip'): # Flips a coin
         resultOfFlip = random.choice(['Heads', 'Tails'])
         await client.send_message(message.channel, resultOfFlip)
-    elif message.content.startswith('!addquote'): # Adds a quote to a running quote file.!
+    elif message.content.startswith('!addquote'): # Adds a quote to a running quote file.
         if not os.path.isfile("quote_file.pk1"):
             quote_list = []
         else:
