@@ -14,13 +14,11 @@ async def on_ready():
     print(client.user.id)
     print('-------')
 
-# TEST TEST TEST
-
 @client.event
 async def on_message(message):
     if message.content.startswith('!istimcool'): # Tim is cool, duh.
         await client.send_message(message.channel, 'Well of course.')
-    elif message.content.startswith('!hidrricks'): # Lab time!
+    if message.content.startswith('!hidrricks'): # Tim is cool, duh.
         await client.send_message(message.channel, 'Hello! It must be lab day.')
     elif message.content.startswith('!whattimeisit'): # Returns current time
         await client.send_message(message.channel, datetime.datetime.now().time())
