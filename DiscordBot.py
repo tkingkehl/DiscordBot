@@ -14,6 +14,8 @@ async def on_ready():
     print(client.user.id)
     print('-------')
 
+    # TEST
+
 @client.event
 async def on_message(message):
     if message.content.startswith('!istimcool'): # Tim is cool, duh.
