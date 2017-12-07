@@ -10,9 +10,9 @@ import steamapi
 
 client = discord.Client()
 
-file = open("C:/Users/darth/Documents/token.txt")
+file = open("C:/Users/Tim/Documents/token.txt")
 token = file.read()
-file = open("C:/Users/darth/Documents/SteamToken.txt")
+file = open("C:/Users/Tim/Documents/SteamToken.txt")
 steamToken = file.read()
 
 @client.event
@@ -57,8 +57,8 @@ async def on_message(message):
         rps = random.choice(["Rock", "Paper", "Scissors"])
         await client.send_message(message.channel, rps)
 
-    elif message.content.startswith('!meme'):  # Turns to emoji text.
-        Message = message.content[6:]
+    elif message.content.startswith('!emoji'):  # Turns to emoji text.
+        Message = message.content[7:]
 
         if Message == 'hello':  # hello
             await client.send_message(message.channel, ':regional_indicator_h::regional_indicator_e::regional_indicator_l::regional_indicator_l::regional_indicator_o:')
